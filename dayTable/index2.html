@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>VIP 시간표</title>
+  </head>
+  <body onload="printAll()">
+    <div id="buttonDiv">
+      <button id="saveBtn" style="height: 30px; width: 50px">저장</button>
+      <!-- <button id="clearBtn" style="height: 30px; width: 70px">비우기</button> -->
+      <button id="dateBtn" style="height: 30px; width: 80px">날짜 입력</button>
+      <!-- <button id="mergeBtn" style="height: 30px; width: 80px">병합/해제</button> -->
+      <button id="addRowBtn" style="height: 30px; width: 100px">열 추가</button>
+      <a href="../index.html"><button id="pageTurnBtn" style="height: 30px; width: 80px">선생님별</button></a>
+      <button id="pageTurnBtn" style="height: 30px; width: 80px; background-color: rgb(116, 102, 102); color: blanchedalmond">요일별</button>
+      <button id="boldBtn" style="font-weight: bold">가</button>
+    </div>
+    <div class="block" style="height: 25px"></div>
+    <div id="tableList"></div>
+    <div class="block" style="height: 20px"></div>
+    <div id="buttonDiv2"><span id="sheetBtnList"></span><button id="newSheet" style="height: 24px; width: 24px">+</button></div>
+    <script src="app2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>VIP 시간표</title>
+  </head>
+  <body onload="printAll()">
+    <div id='buttonDiv'>
+    <button id="saveBtn" style="height: 30px; width: 50px">저장</button>
+    <button id="mergeBtn" style="height: 30px; width: 80px">병합/해제</button>
+    <button id="addTableBtn" style="height: 30px; width: 100px">테이블 추가</button>
+    <button id="pageTurnBtn" style="height: 30px; width: 80px; background-color: rgb(116, 102, 102); color:blanchedalmond">선생님별</button>
+    <a href="../dayTable/index2.html"><button id="pageTurnBtn" style="height: 30px; width: 80px">요일별</button></a>
+    <input style="width: 225px; text-align: center; font-weight: bold;" disabled></input>
+    <button id="newSheet" style="height: 30px; width: 30px;">+</button>
+    <span id="sheetBtnList"></span>
+  </div>
+  <div id="tableList"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
