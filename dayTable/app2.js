@@ -434,10 +434,10 @@ function printTable() {
       trElement2.appendChild(thElement2);
       if (localStorage.getItem("teachers" + currentPage) === null) {
       } else {
-        if (JSON.parse(localStorage.getItem("teachers" + currentPage))[k] === "undefined" || JSON.parse(localStorage.getItem("teachers" + currentPage))[k] === "") {
-        } else {
-          thElement2.innerHTML = JSON.parse(localStorage.getItem("teachers" + currentPage))[k];
-        }
+        // if (JSON.parse(localStorage.getItem("teachers" + currentPage))[k] === "undefined" || JSON.parse(localStorage.getItem("teachers" + currentPage))[k] === "") {
+        // } else {
+        thElement2.innerHTML = JSON.parse(localStorage.getItem("teachers" + currentPage))[k] || "";
+        // }
       }
       for (let j = 0; j < 21; j++) {
         let tdElement = document.createElement("td");

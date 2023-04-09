@@ -346,9 +346,12 @@ function deleteTable() {
   localStorage.removeItem(currentPage + "tableData" + (localStorage.getItem("numOfTables") - 1));
 
   const teachers = JSON.parse(localStorage.getItem("teachers" + currentPage));
-  teachers.splice(tableNum, 1);
-  localStorage.setItem("teachers" + currentPage, JSON.stringify(teachers));
-
+  if (!teachers) {
+    // === if(teachers===undefined)
+  } else {
+    teachers.splice(tableNum, 1);
+    localStorage.setItem("teachers" + currentPage, JSON.stringify(teachers));
+  }
   printTable();
 }
 
@@ -412,7 +415,7 @@ function printTable() {
       txtElement.classList.add("teacherNames");
       if (localStorage.getItem("teachers" + currentPage) === null) {
       } else {
-        txtElement.innerHTML = JSON.parse(localStorage.getItem("teachers" + currentPage))[p];
+        txtElement.innerHTML = JSON.parse(localStorage.getItem("teachers" + currentPage))[p] || "";
       }
       thElement.appendChild(txtElement);
       trElement.appendChild(thElement);
